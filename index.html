@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happiest year</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive-style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+    <header class="header_wrapper">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">Happiest year</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-stream navbar-toggler-icon"></i>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav menu-navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ideas.html">Ideas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="plan.html">Planning</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Letter</a>
+                        </li>
+                        </li>
+                        <li class="nav-item mt-3 mt-lg-0">
+                            <a class="main-btn" href="contact.html">Contact me</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="banner_wrapper p-0">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(./images/slider/slider2.webp);">
+                    <div class="slide-caption text-center">
+                        <div>
+                            <h1>happy new year!</h1>
+                            <p>spend a magical New Year's Eve with us </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url(./images/slider/slider1.webp);">
+                    <div class="slide-caption text-center">
+                        <div>
+                            <h1>get ready for the new year!</h1>
+                            <p>discover new opportunities and make plans with us </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div id="countdown" class="countdown">
+            <div class="time">
+                <h2 id="days"></h2>
+                <small>Days</small>
+            </div>
+
+            <div class="time">
+                <h2 id="hours"></h2>
+                <small>Hours</small>  
+            </div>
+
+            <div class="time">
+                <h2 id="minutes"></h2>
+                <small>Minutes</small>  
+            </div>
+
+            <div class="time">
+                <h2 id="seconds"></h2>
+                <small>Seconds</small>  
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about_wrapper">
+        <div class="container">
+            <div class="row flex-lg-row flex-column-reverse ">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h3>Welcome to <span> <br class="d-none d-lg-block">
+                        a realm of joy</span> and new beginnings!</h3>
+                    <p>Enter a world of joy and magic as we greet the arrival of a new year. Our website invites you to
+                         experience the happiest moments, where dreams shine like stardust unfold 
+                         like the chapters of a captivating story.</p>
+                    <p>To the happiest new year — a magical canvas for your dreams. Let the enchantment begin!</p>
+                    <a href="ideas.html" class="main-btn mt-4">Explore</a>
+                </div>
+                <div class="col-lg-6 mb-4 mb-lg-0 ps-lg-4 text-center">
+                    <img src="images/about-img.webp" class="img-fluid" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          // Fade in the heading and paragraphs
+          $('#about h3, #about p').fadeIn(1500, function() {
+            // After text is fully visible, fade in the image
+            $('#about img').fadeIn(1000);
+          });
+        });
+      </script>
+    <div class="aligning-video">
+        <video id="myVideo" width="640" height="360" controls>
+            <source src="itstime.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div>
+            <button onclick="playPause()">Play/Pause</button>
+            <button onclick="stop()">Stop</button>
+            <button onclick="muteUnmute()">Mute/Unmute</button>
+        </div>
+    </div>
+    <script>
+        var video = document.getElementById("myVideo");
+
+        function playPause() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+
+        function stop() {
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        function muteUnmute() {
+            if (video.muted) {
+                video.muted = false;
+            } else {
+                video.muted = true;
+            }
+        }
+    </script>
+    <section id="blog" class="blog_wrapper pb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 section-title text-center mb-5">
+                    <h6>Stay tuned.</h6>
+                    <h3>Our Blog</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card p-0 border-0 rounded-0">
+                        <img src="images/blog/blog1.jpg" alt="">
+                        <div class="blog-content bg-white p-4">
+                            <h5 class="text-decoration-underline mb-4">New Year, New Mindset: Cultivating Positivity in 2024</h5>
+                            <h6>By Admin - November 18, 2023</h6>
+                            <p class="mt-2">As we step into the New Year, it's the perfect time to consider the impact of our mindset on our well-being.
+                            </p>
+                            <a href="https://writtenbyshweta.com/new-year-resolution-ideas/" target="_blank" class="main-btn mt-2">Read More</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-0 border-0 rounded-0">
+                        <img src="images/blog/blog1.jpg" alt="">
+                        <div class="blog-content bg-white p-4">
+                            <h5 class="text-decoration-underline mb-4">Simple Ways to Add Warmth to the Season</h5>
+                            <h6>By Admin - October 27, 2023</h6>
+                            <p class="mt-2">Here are some simple ways to create a hygge-inspired Christmas atmosphere:
+                            </p>
+                            <a href="https://www.jrlinteriors.com/blog/2022/1/21/6-ways-to-add-cozy-warmth-for-winter" target="_blank" class="main-btn mt-2">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="footer_wrapper mt-3 mt-md-0 pb-0">
+        <div class="container pb-3">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <h5>Stay Connected</h5>
+                    <ul class="social-network d-flex align-items-center p-0">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Main Links</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="contact.html">Letters</a></li>
+                        <li><a href="ideas.html">Movies</a></li>
+                        <li><a href="ideas.html">New recipes</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                     <h5>More Links</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="plan.html">Music</a></li>
+                        <li><a href="#blog">Blogs</a></li>
+                        <li><a href="plan.html">Buy Gifts</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Information</h5>
+                    <div class="form-group mb-4">
+                        <h6 style="color: white;">Join us in spreading joy and creating lasting memories this Christmas. Discover the magic of the holiday on our website.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
+
